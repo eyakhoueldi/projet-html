@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Livres - Univers des Livres</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../bib.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #f9f9f9, #e8f0e8);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* Titre principal */
+        .page-title {
+
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.8rem;
+            color: #2f4f2f;
+            text-align: center;
+            margin: 50px 0 15px;
+            text-shadow: 1px 1px 12px rgba(71,207,115,0.25);
+        }
+        .page-subtitle {
+            text-align: center;
+            color: #47cf73;
+            font-weight: 500;
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 60px;
+        }
+
+        /* Cartes de livres */
+        .book-card {
+            background: #ffffff;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+            transition: all 0.45s ease;
+            border: 1px solid #f0f8f0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-card:hover {
+            transform: translateY(-14px);
+            box-shadow: 0 24px 50px rgba(0,0,0,0.22);
+            border-color: #47cf73;
+        }
+
+        .book-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: fill;
+            transition: transform 0.5s ease;
+        }
+        .book-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .book-card-body {
+            padding: 22px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .book-card-title {
+            font-size: 1.4rem;
+            color: #1d2b1f;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .book-author {
+            color: #555;
+            font-style: italic;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        .book-genre {
+            font-size: 0.82rem;
+            color: #47cf73;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 14px;
+        }
+        .book-status {
+            align-self: flex-start;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .status-dispo {
+            background: #e8f5e9;
+            color: #2f4f2f;
+        }
+        .status-bientot {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+
+        .btn-details {
+            margin-top: auto;
+            background: linear-gradient(135deg, #2f4f2f, #47cf73);
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.35s ease;
+            display: inline-block;
+        }
+        .btn-details:hover {
+            background: linear-gradient(135deg, #1d2b1f, #2f8a47);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(71,207,115,0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title { font-size: 2.8rem; }
+            .book-card img { height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header identique à votre site -->
+<header>
+    <div class="header-overlay">
+        <h1>Univers des Livres</h1>
+        <nav>
+            <a href="bib.html">Accueil</a>
+            <a href="#">Catégories</a>
+            <a href="livres-liste.html">Livres</a>
+            <a href="#">Emprunt</a>
+            <a href="#">Nouveautés</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="py-5">
+    <div class="container">
+        <h2 class="page-title">Notre catalogue</h2>
+        <p class="page-subtitle">Découvrez tous nos ouvrages disponibles</p>
+
+        <div class="row g-5 justify-content-center">
+
+            <!-- Livre 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/Littleprince.JPG" alt="Le petit prince" width="50px" height="50px">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">Le petit prince</h3>
+                        <p class="book-author">Antoine de Saint-Exupéry</p>
+                        <p class="book-genre">Conte philosophique, littérature jeunesse, fable</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./classique1.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livre 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/class2.jpg" alt="Les Lions de Sicile">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">Les Lions de Sicile</h3>
+                        <p class="book-author">Stefania Auci</p>
+                        <p class="book-genre">Roman historique, saga familiale, littérature italienne</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./classique2.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livre 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/class3.jpg" alt="La ferme du bout du monde">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">La ferme du bout du monde</h3>
+                        <p class="book-author">Sarah Vaughan</p>
+                        <p class="book-genre">Roman historique, drame familial</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./classique3.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livre 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/class4.jpg" alt="">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">Les Charités d'Alcippe</h3>
+                        <p class="book-author">Marguerite Yourcenar</p>
+                        <p class="book-genre">Poésie</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./classique4.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livre 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/class5.jpg" alt="L'Aigle de la 9e légion" onerror="this.src='images/default-book.jpg'">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">L'Aigle de la 9e légion</h3>
+                        <p class="book-author">Rosemary Sutcliff</p>
+                        <p class="book-genre">Roman historique, littérature jeunesse</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./classique5.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4 mt-5">
+    <div class="container text-center">
+        <p class="mb-0">© 2025 Univers des Livres — Tous droits réservés.</p>
+    </div>
+</footer>
+
+</body>
+</html>
