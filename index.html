@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univers des Livres</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-overlay">
+        <h1>Univers des Livres</h1>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#">Catégories</a>
+            <a href="#">Livres</a>
+            <a href="#">Emprunt</a>
+            <a href="#">Nouveautés</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="welcome">
+        <h2>Bienvenue dans notre bibliothèque en ligne</h2>
+        <p class="lead">Explorez nos livres, découvrez des nouveautés et trouvez votre prochaine lecture.</p>
+    </section>
+</main>
+
+<section class="categories">
+    <h2>Catégories principales</h2>
+    <div class="categories-grid">
+        <!-- Romance -->
+        <a href="./livres/Romance/liste-romance.html" class="category-link">
+            <div class="category-card">
+                <img src="./imgs/romance.jpg" alt="Romance" class="category-img">
+                <h3>Romance / Feel-Good / Romans sentimentaux</h3>
+                <p>Découvrez des histoires d'amour passionnantes et émouvantes.</p>
+            </div>
+        </a>
+
+        <!-- Science-fiction & Fantasy -->
+        <a href="./livres/Fantasy/liste-fantasy.html" class="category-link">
+            <div class="category-card">
+                <img src="./imgs/science.jpg" alt="Science-fiction & Fantasy" class="category-img">
+                <h3>Science-fiction & Fantastique / Fantasy</h3>
+                <p>Plongez dans des mondes imaginaires et épiques.</p>
+            </div>
+        </a>
+
+        <!-- Histoire -->
+        <a href="./livres/histoire/liste-history.html" class="category-link">
+            <div class="category-card">
+                <img src="./imgs/histoire.jpg" alt="Histoire" class="category-img">
+                <h3>Histoire</h3>
+                <p>Explorez le passé à travers des récits historiques captivants.</p>
+            </div>
+        </a>
+
+        <!-- Polar / Thriller -->
+        <a href="./livres/thriller/liste-thriller.html" class="category-link">
+            <div class="category-card">
+                <img src="./imgs/thriller.jpg" alt="Thriller & Policier" class="category-img">
+                <h3>Polar / Thriller / Roman policier / Suspense</h3>
+                <p>Vivez des suspenses haletants et des intrigues mystérieuses.</p>
+            </div>
+        </a>
+
+        <!-- Classiques -->
+        <a href="./livres/classique/liste-classique.html" class="category-link">
+            <div class="category-card">
+                <img src="./imgs/classique.jpg" alt="Classiques" class="category-img">
+                <h3>Classique / Littérature générale</h3>
+                <p>Redécouvrez les grands œuvres intemporelles de la littérature.</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<section class="nouveautes">
+    <h2>Nouveautés</h2>
+    <div class="nouveautes-grid">
+        <div class="nouveaute-card">
+            <img src="images/homo_deus.jpg" alt="Homo Deus">
+            <div class="card-body">
+                <h3>Homo Deus</h3>
+                <p class="author">Yuval Noah Harari</p>
+                <p class="status">Disponible maintenant</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+        </div>
+
+        <div class="nouveaute-card">
+            <img src="images/seigneur_anneaux.jpg" alt="Le Seigneur des Anneaux">
+            <div class="card-body">
+                <h3>Le Seigneur des Anneaux</h3>
+                <p class="author">J.R.R. Tolkien</p>
+                <p class="status">Bientôt disponible</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+        </div>
+
+        <div class="nouveaute-card">
+            <img src="images/ia_revolution.jpg" alt="L'IA Révolution">
+            <div class="card-body">
+                <h3>L'IA Révolution</h3>
+                <p class="author">Alice Dupont</p>
+                <p class="status">Disponible maintenant</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Univers des Livres — Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
