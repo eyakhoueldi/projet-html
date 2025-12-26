@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Univers des Livres</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="bib.css">
 </head>
 <body>
 
@@ -25,8 +25,11 @@
 
 <main>
     <section class="welcome">
-        <h2>Bienvenue dans notre bibliothèque en ligne</h2>
-        <p class="lead">Explorez nos livres, découvrez des nouveautés et trouvez votre prochaine lecture.</p>
+        <div class="welcome-content">
+            <h2>Bienvenue dans notre bibliothèque en ligne</h2>
+            <p class="lead">Explorez nos livres, découvrez des nouveautés et trouvez votre prochaine lecture.</p>
+            <button class="btn-explore">Consultez les catégories</button>
+        </div>
     </section>
 </main>
 
@@ -45,7 +48,7 @@
         <!-- Science-fiction & Fantasy -->
         <a href="./livres/Fantasy/liste-fantasy.html" class="category-link">
             <div class="category-card">
-                <img src="./imgs/science.jpg" alt="Science-fiction & Fantasy" class="category-img">
+                <img src="./imgs/science.jpg" alt="Science-fiction" class="category-img">
                 <h3>Science-fiction & Fantastique / Fantasy</h3>
                 <p>Plongez dans des mondes imaginaires et épiques.</p>
             </div>
@@ -63,7 +66,7 @@
         <!-- Polar / Thriller -->
         <a href="./livres/thriller/liste-thriller.html" class="category-link">
             <div class="category-card">
-                <img src="./imgs/thriller.jpg" alt="Thriller & Policier" class="category-img">
+                <img src="./imgs/thriller.jpg" alt="Thriller" class="category-img">
                 <h3>Polar / Thriller / Roman policier / Suspense</h3>
                 <p>Vivez des suspenses haletants et des intrigues mystérieuses.</p>
             </div>
@@ -81,34 +84,106 @@
 </section>
 
 <section class="nouveautes">
-    <h2>Nouveautés</h2>
-    <div class="nouveautes-grid">
+    <h2>📖 Nouveautés</h2>
+    <div class="nouveautes-scroller">
+        <!-- Book 1 -->
         <div class="nouveaute-card">
-            <img src="images/homo_deus.jpg" alt="Homo Deus">
+            <span class="new-badge">⚡</span>
+            <img src="homo.jpg" alt="Homo Deus">
             <div class="card-body">
                 <h3>Homo Deus</h3>
                 <p class="author">Yuval Noah Harari</p>
-                <p class="status">Disponible maintenant</p>
+                <p class="status disponible">✅ Disponible maintenant</p>
+                <div class="genre-tags">
+                    <span>Science</span>
+                    <span>Philosophie</span>
+                </div>
+                <p>Une exploration fascinante des futurs possibles de l’humanité et des défis technologiques.</p>
                 <button class="btn">En savoir plus</button>
             </div>
         </div>
 
+        <!-- Book 2 -->
         <div class="nouveaute-card">
-            <img src="images/seigneur_anneaux.jpg" alt="Le Seigneur des Anneaux">
+            <span class="new-badge">⚡</span>
+            <img src="lotr.jpg" alt="Le Seigneur des Anneaux">
             <div class="card-body">
                 <h3>Le Seigneur des Anneaux</h3>
                 <p class="author">J.R.R. Tolkien</p>
-                <p class="status">Bientôt disponible</p>
+                <p class="status bientot">⏳ Bientôt disponible</p>
+                <div class="genre-tags">
+                    <span>Fantasy</span>
+                    <span>Aventure</span>
+                </div>
+                <p>Plongez dans un monde épique rempli de quêtes, créatures mythiques et batailles légendaires.</p>
                 <button class="btn">En savoir plus</button>
             </div>
         </div>
 
+        <!-- Book 3 -->
         <div class="nouveaute-card">
-            <img src="images/ia_revolution.jpg" alt="L'IA Révolution">
+            <span class="new-badge">⚡</span>
+            <img src="ai.jpg" alt="L'IA Révolution">
             <div class="card-body">
                 <h3>L'IA Révolution</h3>
                 <p class="author">Alice Dupont</p>
-                <p class="status">Disponible maintenant</p>
+                <p class="status disponible">✅ Disponible maintenant</p>
+                <div class="genre-tags">
+                    <span>Informatique</span>
+                    <span>IA</span>
+                </div>
+                <p>Découvrez comment l’intelligence artificielle transforme notre monde et nos métiers.</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="nouveaute-card">
+            <span class="new-badge">⚡</span>
+            <img src="jardin.jpg" alt="Le Jardin des Ombres">
+            <div class="card-body">
+                <h3>Le Jardin des Ombres</h3>
+                <p class="author">Marie Dubois</p>
+                <p class="status disponible">✅ Disponible maintenant</p>
+                <div class="genre-tags">
+                    <span>Roman</span>
+                    <span>Suspense</span>
+                </div>
+                <p>Une intrigue captivante mêlant secrets familiaux et mystères du passé.</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="nouveaute-card">
+            <span class="new-badge">⚡</span>
+            <img src="np.jpg" alt="Napoléon : L’Homme et la Légende">
+            <div class="card-body">
+                <h3>Napoléon : L’Homme et la Légende</h3>
+                <p class="author">Jean Martin</p>
+                <p class="status disponible">✅ Disponible maintenant</p>
+                <div class="genre-tags">
+                    <span>Histoire</span>
+                    <span>Biographie</span>
+                </div>
+                <p>Découvrez la vie fascinante et complexe de Napoléon Bonaparte, au-delà des batailles.</p>
+                <button class="btn">En savoir plus</button>
+            </div>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="nouveaute-card">
+            <span class="new-badge">⚡</span>
+            <img src="leo.jpg" alt="Les Aventures de Léo">
+            <div class="card-body">
+                <h3>Les Aventures de Léo</h3>
+                <p class="author">Sophie Lambert</p>
+                <p class="status bientot">⏳ Bientôt disponible</p>
+                <div class="genre-tags">
+                    <span>Jeunesse</span>
+                    <span>Aventure</span>
+                </div>
+                <p>Un voyage extraordinaire pour les jeunes lecteurs à travers des mondes imaginaires fascinants.</p>
                 <button class="btn">En savoir plus</button>
             </div>
         </div>
