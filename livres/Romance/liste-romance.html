@@ -4,135 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Romance - Univers des Livres</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../bib.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to bottom, #f9f9f9, #e8f0e8);
-            color: #333;
-            min-height: 100vh;
-        }
-
-        /* Titre principal */
-        .page-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3.8rem;
-            color: #2f4f2f;
-            text-align: center;
-            margin: 50px 0 15px;
-            text-shadow: 1px 1px 12px rgba(71,207,115,0.25);
-        }
-        .page-subtitle {
-            text-align: center;
-            color: #47cf73;
-            font-weight: 500;
-            font-size: 1.1rem;
-            letter-spacing: 1.5px;
-            margin-bottom: 60px;
-        }
-
-        /* Cartes de livres */
-        .book-card {
-            background: #ffffff;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.12);
-            transition: all 0.45s ease;
-            border: 1px solid #f0f8f0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .book-card:hover {
-            transform: translateY(-14px);
-            box-shadow: 0 24px 50px rgba(0,0,0,0.22);
-            border-color: #47cf73;
-        }
-
-        .book-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .book-card:hover img {
-            transform: scale(1.06);
-        }
-
-        .book-card-body {
-            padding: 22px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .book-card-title {
-            font-size: 1.4rem;
-            color: #1d2b1f;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .book-author {
-            color: #555;
-            font-style: italic;
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-        }
-        .book-genre {
-            font-size: 0.82rem;
-            color: #47cf73;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            margin-bottom: 14px;
-        }
-        .book-status {
-            align-self: flex-start;
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        .status-dispo {
-            background: #e8f5e9;
-            color: #2f4f2f;
-        }
-        .status-bientot {
-            background: #fff3e0;
-            color: #ef6c00;
-        }
-
-        .btn-details {
-            margin-top: auto;
-            background: linear-gradient(135deg, #2f4f2f, #47cf73);
-            color: white;
-            text-align: center;
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.35s ease;
-            display: inline-block;
-        }
-        .btn-details:hover {
-            background: linear-gradient(135deg, #1d2b1f, #2f8a47);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(71,207,115,0.4);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .page-title { font-size: 2.8rem; }
-            .book-card img { height: 250px; }
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href="../../bib.css">         
+    <link rel="stylesheet" href="liste-romance.css">      
 <body>
 
 <header>
-    <div class="header-overlay">
+    <div class="container">
         <h1>Univers des Livres</h1>
         <nav>
             <a href="../../bib.html">Accueil</a>
@@ -208,6 +86,65 @@
                 </div>
             </div>
 
+       <!-- Livre 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/rom1.jpg" alt="P.S. I Love You">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">P.S. I Love You</h3>
+                        <p class="book-author">Cecelia Ahern</p>
+                        <p class="book-genre">Romance, drame</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./romance1.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livre 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/rom2.jpg" alt="Avant toi">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">Avant toi</h3>
+                        <p class="book-author">Jojo Moyes</p>
+                        <p class="book-genre">Romance, drame</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./romance2.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livre 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/rom3.jpg" alt="Nos étoiles contraires">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">Nos étoiles contraires</h3>
+                        <p class="book-author">John Green</p>
+                        <p class="book-genre">Romance, littérature jeunesse</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./romance3.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Livre 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="book-card">
+                    <img src="./imgs/rom4.jpg" alt="L'amour dure trois ans">
+                    <div class="book-card-body">
+                        <h3 class="book-card-title">L'amour dure trois ans</h3>
+                        <p class="book-author">Frédéric Beigbeder</p>
+                        <p class="book-genre">Romance contemporaine</p>
+                        <span class="book-status status-dispo">Disponible</span>
+                        <a href="./romance4.html" class="btn-details">Voir le livre</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
             <!-- Livre 5 -->
             <div class="col-lg-4 col-md-6">
                 <div class="book-card">
@@ -226,7 +163,7 @@
     </div>
 </main>
 
-<footer class="bg-dark text-light py-4 mt-5">
+<footer>
     <div class="container text-center">
         <p class="mb-0">© 2025 Univers des Livres — Tous droits réservés.</p>
     </div>
