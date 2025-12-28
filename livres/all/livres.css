@@ -1,0 +1,202 @@
+/* Reset de base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f9f9f9, #e8f0e8);
+    color: #333;
+    min-height: 100vh;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Layout utilitaires */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px -10px 0;
+}
+.g-5 > * {
+    padding: 15px 10px;
+}
+.justify-content-center {
+    justify-content: center;
+}
+
+/* Colonnes de grille */
+.col-lg-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+.col-md-3 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+.col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+
+.text-center { text-align: center; }
+.py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+.mt-5 { margin-top: 3rem !important; }
+.mb-0 { margin-bottom: 0 !important; }
+
+/* Header */
+header {
+    background: #2f4f2f;
+    color: white;
+    padding: 20px 0;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+header nav a {
+    color: white;
+    font-weight: 500;
+}
+
+/* Titre principal */
+.page-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.8rem;
+    color: #2f4f2f;
+    text-align: center;
+    margin: 50px 0 15px;
+    text-shadow: 1px 1px 12px rgba(71,207,115,0.25);
+}
+.page-subtitle {
+    text-align: center;
+    color: #47cf73;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 60px;
+}
+
+/* Cartes de livres */
+.book-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: all 0.45s ease;
+    border: 1px solid #f0f8f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.22);
+    border-color: #47cf73;
+}
+.book-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.book-card:hover img {
+    transform: scale(1.06);
+}
+.book-card-body {
+    padding: 16px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.book-card-title {
+    font-size: 1.25rem;
+    color: #1d2b1f;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+.book-author {
+    color: #555;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+.book-genre {
+    font-size: 0.78rem;
+    color: #47cf73;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+}
+.book-status {
+    align-self: flex-start;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.status-dispo {
+    background: #e8f5e9;
+    color: #2f4f2f;
+}
+.status-bientot {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+.btn-details {
+    margin-top: auto;
+    background: linear-gradient(135deg, #2f4f2f, #47cf73);
+    color: white;
+    text-align: center;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.35s ease;
+    display: inline-block;
+    font-size: 0.95rem;
+}
+.btn-details:hover {
+    background: linear-gradient(135deg, #1d2b1f, #2f8a47);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(71,207,115,0.4);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .col-md-3 { flex: 0 0 33.3333%; max-width: 33.3333%; } /* 3 cartes par ligne */
+}
+@media (max-width: 768px) {
+    .page-title { font-size: 2.8rem; }
+    .book-card img { height: 180px; }
+    .col-sm-6 { flex: 0 0 50%; max-width: 50%; } /* 2 cartes par ligne sur mobile */
+}
+@media (max-width: 576px) {
+    .col-sm-6 { flex: 0 0 100%; max-width: 100%; } /* Optionnel : 1 carte sur très petit écran */
+}
