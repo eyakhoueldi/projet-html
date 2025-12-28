@@ -9,11 +9,16 @@ body {
     overflow-x: hidden;
 }
 
-/* HEADER – VERSION PLUS COMPACTE */
+/* DEFILEMENT FLUIDE */
+html {
+    scroll-behavior: smooth;
+}
+
+/* HEADER – VERSION COMPACTE */
 header {
     width: 100%;
-    min-height: 160px;          /* Réduit pour une navbar plus fine */
-    height: 25vh;               /* Hauteur relative plus petite */
+    min-height: 160px;
+    height: 25vh;
     max-height: 240px;
     position: relative;
     background-image: url('bg.jpeg');
@@ -43,7 +48,7 @@ header h1 {
     font-size: clamp(26px, 4vw, 42px);
     font-weight: 700;
     letter-spacing: 2px;
-    margin: 0 0 12px 0;         /* Moins d'espace sous le titre */
+    margin: 0 0 12px 0;
     text-transform: uppercase;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
@@ -65,7 +70,7 @@ nav li {
 nav a {
     color: #cde0cd;
     text-decoration: none;
-    font-size: 1rem;            /* Police un peu plus petite */
+    font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
@@ -93,7 +98,7 @@ nav a:hover::after {
 
 /* WELCOME */
 .welcome {
-    padding: 70px 20px;         /* Légèrement réduit pour équilibrer */
+    padding: 70px 20px;
     text-align: center;
     background: linear-gradient(135deg, #ffffff 0%, #f8fff8 50%, rgba(71, 207, 115, 0.05) 100%);
     border-radius: 0 0 30px 30px;
