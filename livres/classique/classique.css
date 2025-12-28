@@ -1,0 +1,248 @@
+/* ==================== STYLE AQUARELLE PUR – UPDATED VERSION ==================== */
+
+body {
+    background: linear-gradient(135deg, #fdfbf7, #f0f7f0);
+    font-family: 'Poppins', sans-serif;
+    color: #2f4f2f;
+    min-height: 100vh;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: url('images/aquarelle-light.jpg') center / cover no-repeat;
+    opacity: 0.09;
+    z-index: -2;
+}
+
+/* ==================== HEADER (from bib.css – kept compatible) ==================== */
+.site-header {
+    background: linear-gradient(135deg, #1f3d2b, #2f5e3f);
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header h4 {
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.site-header a {
+    color: #eaf5ea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.site-header a:hover {
+    color: #7ee2a8;
+}
+
+/* ==================== MAIN CONTAINER ==================== */
+.container-main {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    box-shadow: 0 14px 32px rgba(0,0,0,0.09);
+    margin: 30px auto;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+/* ==================== BOOK LAYOUT ==================== */
+.book-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 18px 22px;
+}
+
+/* ==================== LEFT COLUMN ==================== */
+.book-sidebar {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.book-cover img {
+    max-width: 220px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+    transition: transform 0.4s ease;
+}
+
+.book-cover:hover img {
+    transform: scale(1.04) translateY(-5px);
+}
+
+/* ==================== SIDEBAR ==================== */
+.sidebar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.09);
+    text-align: center;
+}
+
+.sidebar h5 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 1.1rem;
+}
+
+.sidebar a {
+    display: block;
+    padding: 0.55rem 0;
+    color: #2f4f2f;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(71, 207, 115, 0.15);
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    color: #47cf73;
+    padding-left: 6px;
+}
+
+.sidebar a:last-child {
+    border-bottom: none;
+}
+
+.sidebar a.coup-de-coeur {
+    color: #e91e63;
+    font-weight: 600;
+}
+
+/* ==================== RIGHT COLUMN ==================== */
+.book-details {
+    flex: 2 1 500px;
+}
+
+.book-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: #2f4f2f;
+    margin: 0 0 0.2rem;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
+}
+
+.rating {
+    color: #ffd700;
+    letter-spacing: 2px;
+    font-size: 1.05rem;
+}
+
+.rating-section span {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.meta-info {
+    color: #555;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+}
+
+.separator {
+    border: none;
+    border-top: 2px solid rgba(71, 207, 115, 0.3);
+    margin: 20px 0;
+}
+
+.book-details h5 {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+.description {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: #333;
+    background: rgba(247, 252, 247, 0.7);
+    padding: 1.1rem 1.2rem;
+    border-radius: 16px;
+    border-left: 4px solid #47cf73;
+}
+
+.action-center {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-reserver {
+    background: linear-gradient(135deg, #47cf73, #2f8a47);
+    color: white;
+    padding: 10px 26px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 6px 16px rgba(71, 207, 115, 0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-reserver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(71, 207, 115, 0.45);
+}
+
+/* ==================== FOOTER ==================== */
+.site-footer {
+    background: linear-gradient(135deg, #1f3d2b, #2f5e3f);
+    color: #eaf5ea;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+    .book-title {
+        font-size: 2rem;
+    }
+    .book-layout {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .book-sidebar {
+        align-items: stretch;
+    }
+    .sidebar {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-main {
+        margin: 20px 10px;
+        border-radius: 18px;
+    }
+    .book-cover img {
+        max-width: 200px;
+    }
+}
