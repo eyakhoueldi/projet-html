@@ -9,12 +9,12 @@ body {
     overflow-x: hidden;
 }
 
-/* HEADER */
+/* HEADER – VERSION PLUS COMPACTE */
 header {
     width: 100%;
-    min-height: 220px;
-    height: 35vh;
-    max-height: 380px;
+    min-height: 160px;          /* Réduit pour une navbar plus fine */
+    height: 25vh;               /* Hauteur relative plus petite */
+    max-height: 240px;
     position: relative;
     background-image: url('bg.jpeg');
     background-size: cover;
@@ -40,43 +40,51 @@ header {
 
 header h1 {
     color: #fff;
-    font-size: clamp(28px, 4vw, 48px);
+    font-size: clamp(26px, 4vw, 42px);
     font-weight: 700;
     letter-spacing: 2px;
-    margin: 0;
+    margin: 0 0 12px 0;         /* Moins d'espace sous le titre */
     text-transform: uppercase;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
 }
 
-nav {
-    margin-top: 15px;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+nav li {
+    margin: 0;
 }
 
 nav a {
     color: #cde0cd;
     text-decoration: none;
-    margin: 0 18px;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 1rem;            /* Police un peu plus petite */
+    font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
+    padding-bottom: 4px;
 }
 
 nav a::after {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 50%;
+    bottom: 0;
+    left: 0;
     width: 0;
     height: 2px;
-    background: #cde0cd;
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+    background: #ffffff;
+    transition: width 0.4s ease;
 }
 
 nav a:hover {
     color: #ffffff;
-    font-weight: 600;
 }
 
 nav a:hover::after {
@@ -85,7 +93,7 @@ nav a:hover::after {
 
 /* WELCOME */
 .welcome {
-    padding: 80px 20px;
+    padding: 70px 20px;         /* Légèrement réduit pour équilibrer */
     text-align: center;
     background: linear-gradient(135deg, #ffffff 0%, #f8fff8 50%, rgba(71, 207, 115, 0.05) 100%);
     border-radius: 0 0 30px 30px;
@@ -95,7 +103,7 @@ nav a:hover::after {
 }
 
 .welcome h2 {
-    font-size: 36px;
+    font-size: 34px;
     color: #2f4f2f;
     font-weight: 700;
     margin-bottom: 20px;
@@ -327,10 +335,12 @@ nav a:hover::after {
 
 .status.disponible {
     color: #47cf73;
+    background: rgba(71, 207, 115, 0.1);
 }
 
 .status.bientot {
     color: #f4a261;
+    background: rgba(244, 162, 97, 0.1);
 }
 
 .genre-tags {
@@ -397,9 +407,19 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    header {
+        min-height: 140px;
+        height: 20vh;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
     nav a {
-        display: block;
-        margin: 10px 0;
+        font-size: 1rem;
+        padding: 8px 0;
     }
 
     .welcome {
@@ -415,6 +435,16 @@ footer {
     }
 
     .nouveaute-card {
-        min-width: 250px;
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        min-height: 120px;
+    }
+
+    header h1 {
+        font-size: clamp(22px, 5vw, 36px);
     }
 }
